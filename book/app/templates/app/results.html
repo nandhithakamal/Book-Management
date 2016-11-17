@@ -1,0 +1,7 @@
+{% load staticfiles %}
+{% if p %}:
+    {% for x in p %}:
+        {% csrf token %}
+        <li>{{ x }}</li>
+    {% endfor %}
+{% endif %}

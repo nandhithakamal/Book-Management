@@ -1,0 +1,24 @@
+<html>
+{% load staticfiles %}
+Result page:-
+<br/>
+{% if r %}
+<table border = "1" bgcolor = "#00FFFF">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Edition</th>
+        <th>TotalPages</th>
+    <tr>
+    {% for x in r %}
+    <tr>
+        <td>{{ x.title }}</td>
+        <td> {{ x.author }} </td>
+        <td> {{ x.edition }} </td>
+        <td> {{ x.totalpages }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+<br>
+</html>

@@ -1,0 +1,12 @@
+<html>
+    {% load staticfiles %}
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <name> {{ field.label_tag }} </name>
+            <div> {{ field }} </div>
+        {% endfor %}
+        
+        <button type="submit">Add</button>
+    </form>
+</html>

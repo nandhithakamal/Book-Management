@@ -1,0 +1,24 @@
+<html>
+    {% load staticfiles %}
+    <a href = " {% url 'insert' %}">Insert</a>
+    {% if p %}
+    <table border = "1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Edition</th>
+            <th>totalpages</th>
+        </tr>
+        {% for x in p %}
+        <tr>
+            <td>{{x.title}}</td>
+            <td>{{ x.author }}</td>
+            <td>{{ x.edition }}</td>
+            <td>{{ x.totalpages }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <h1>Add new Books using Insert button</h1>
+    {% endif %}
+</html>
